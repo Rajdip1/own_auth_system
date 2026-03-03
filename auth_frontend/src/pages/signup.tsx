@@ -27,7 +27,7 @@ function Signup() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await API.post("/auth/signup", form);
+      await API.post("/api/auth/signup", form);
 
       toast({
         title: "Signup successful",

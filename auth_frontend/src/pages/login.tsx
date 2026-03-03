@@ -30,7 +30,7 @@ function Login({ setIsAuth }: LoginProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await API.post("/auth/login", form);
+      const res = await API.post("/api/auth/login", form);
 
       // localStorage.setItem("token", res.data.token);
       localStorage.setItem('accessToken', res.data.accessToken)
