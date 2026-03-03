@@ -7,12 +7,14 @@ const connectDB = require("./config/db");
 const middleware = require('./middleware/auth.middleware')
 const auth_routes = require('./routes/auth.routes')
 const cookieParser = require('cookie-parser')
+// const User = require('./models/User') // MongoDB User schema
 
 
 const app = express()
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  // origin: 'http://localhost:5173',
+  origin: 'https://own-auth-system.vercel.app',
   credentials: true
 }))
 app.use(express.json())
