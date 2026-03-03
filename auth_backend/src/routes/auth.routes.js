@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const {signup, login} = require('../controllers/auth.controller')
-const login_limiter = require('../middleware/ratelimit.middleware')
+const login_limiter = require('../middleware/rateLimit.middleware')
 const jwt = require('jsonwebtoken')
 const jwt_config = require('../config/jwt')
 const authMiddleware = require('../middleware/auth.middleware')
