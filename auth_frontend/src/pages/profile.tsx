@@ -8,7 +8,7 @@ function Profile() {
   useEffect(() => {
   const fetchProfile = async () => {
     try {
-      await API.get("/profile");
+      await API.get("/api/profile");
       setStatus("authenticated");
     } catch (error: any) {
       // If 401, interceptor might refresh token
